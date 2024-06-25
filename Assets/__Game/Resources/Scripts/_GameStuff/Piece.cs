@@ -6,8 +6,15 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
 {
   public class Piece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
   {
+    [Header("Tutorial Settings")]
+    [SerializeField] private Color _brightColor;
+    [SerializeField] private Color _darkColor;
+    [field: Space]
+    [field: SerializeField] public Transform TutorialPoint;
+
     private bool _canDrag = true;
     private bool _isDragging = false;
+    private bool _placed = false;
     private Vector3 _offset;
     private Vector3 _initPosition;
     private Quaternion _initRotation;
@@ -30,6 +37,8 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     private void Start()
     {
       _spriteRenderer.sortingOrder = 1;
+
+      UpdateColor();
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,8 +52,11 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
           pieceTrigger.Place(transform, _initPosition, _initRotation);
 
           _canDrag = false;
+          _placed = true;
           _boxCollider.enabled = false;
           _spriteRenderer.sortingOrder = 0;
+
+          UpdateColor();
         }
       }
     }
@@ -83,10 +95,22 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
       }
     }
 
+    public void SetCanDrag(bool canDrag)
+    {
+      _canDrag = canDrag;
+
+      UpdateColor();
+    }
+
     public void SetScatteredPositionAndRotation(Vector3 position, Quaternion rotation)
     {
       _scatteredPosition = position;
       _scatteredRotation = rotation;
+    }
+
+    private void UpdateColor()
+    {
+      _spriteRenderer.color = _placed ? _brightColor : (_canDrag ? _brightColor : _darkColor);
     }
 
     private Vector3 GetWorldPoint(Vector3 screenPoint)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     public bool Completed { get; private set; } = false;
 
     private List<Vector3> _placedPositions = new List<Vector3>();
+    private int _currentTutorialIndex = 0;
 
     private PuzzlesContainer _puzzlesContainer;
 
@@ -51,6 +53,9 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     private void Start()
     {
       SetSprites();
+
+      if (_tutorial == true)
+        StartTutorial();
     }
 
     private void ClearSpriteRenderers()
@@ -144,6 +149,48 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
         gameObject.SetActive(false);
 
       PuzzleCompleted?.Invoke();
+    }
+
+    private void StartTutorial()
+    {
+      SetAllPiecesDraggable(false);
+      StartCoroutine(PlayTutorial());
+    }
+
+    private IEnumerator PlayTutorial()
+    {
+      while (_currentTutorialIndex < _piecesRenderers.Length)
+      {
+        Piece currentPiece = _piecesRenderers[_currentTutorialIndex].GetComponent<Piece>();
+
+        currentPiece.SetCanDrag(true);
+
+        _finger.SetActive(true);
+        _finger.transform.position = currentPiece.TutorialPoint.position;
+
+        _finger.transform.DOMove(_piecesTriggers[_currentTutorialIndex].transform.position, 1.5f)
+            .SetLoops(-1, LoopType.Restart);
+
+        while (_piecesTriggers[_currentTutorialIndex].IsOccupied == false)
+        {
+          yield return null;
+        }
+
+        _finger.transform.DOKill();
+        currentPiece.SetCanDrag(false);
+
+        _currentTutorialIndex++;
+      }
+
+      _finger.SetActive(false);
+    }
+
+    private void SetAllPiecesDraggable(bool canDrag)
+    {
+      foreach (var renderer in _piecesRenderers)
+      {
+        renderer.GetComponent<Piece>().SetCanDrag(canDrag);
+      }
     }
   }
 }
