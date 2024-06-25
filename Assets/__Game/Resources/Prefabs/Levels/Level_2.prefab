@@ -81,6 +81,21 @@ PrefabInstance:
       propertyPath: _maxTime
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8690456869660680946, guid: a454cc821da5e1b419971d0230763865,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690456869660680946, guid: a454cc821da5e1b419971d0230763865,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690456869660680946, guid: a454cc821da5e1b419971d0230763865,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.972549
+      objectReference: {fileID: 0}
     - target: {fileID: 8974865717979555190, guid: a454cc821da5e1b419971d0230763865,
         type: 3}
       propertyPath: m_Name
