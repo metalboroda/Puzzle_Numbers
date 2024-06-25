@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3430369237742271465, guid: dcafbc59f9e1a084c8b43dea90e81820,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf487c42ffcc4804cb68bda3cab1abed, type: 3}
+    - target: {fileID: 3430369237742271465, guid: dcafbc59f9e1a084c8b43dea90e81820,
+        type: 3}
       propertyPath: _piecesSprites.Array.size
       value: 4
       objectReference: {fileID: 0}

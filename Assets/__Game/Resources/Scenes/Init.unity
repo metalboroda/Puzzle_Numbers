@@ -1296,14 +1296,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063039693}
-  m_LocalRotation: {x: 0.021809703, y: -0.02180961, z: 0.0004758875, w: 0.9995242}
-  m_LocalPosition: {x: 0.6, y: 0.6, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 616177973}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.5, y: -2.5, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1063039697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,8 +2090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicMixer: {fileID: 24100000, guid: 618f0dc0539fcf947aaa814bc718890b, type: 2}
   _soundtrackClips:
-  - {fileID: 8300000, guid: 279ad9d5baecf3645ac7c8aec0b209cd, type: 3}
-  - {fileID: 8300000, guid: e27224007480f124dad5fe258fc19b82, type: 3}
+  - {fileID: 8300000, guid: 54d02285300cbda488b51e2d76fca236, type: 3}
+  - {fileID: 8300000, guid: a5ff4c5ef151be344b96d70931b99da6, type: 3}
 --- !u!82 &1668459660
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2105,7 +2105,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

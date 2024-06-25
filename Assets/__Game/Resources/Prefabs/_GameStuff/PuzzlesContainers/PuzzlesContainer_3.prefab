@@ -614,6 +614,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6404228716742838872, guid: 7cfcea95e4d2e0f4fa91c0151a662dc3,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 04d3ebc6f3c41e649beb6851ba4c51b6, type: 3}
+    - target: {fileID: 6404228716742838872, guid: 7cfcea95e4d2e0f4fa91c0151a662dc3,
+        type: 3}
       propertyPath: _piecesSprites.Array.data[0]
       value: 
       objectReference: {fileID: -7512434501291994743, guid: d0ad3995d4a612f4f87fc4a022032cd4,
@@ -719,6 +724,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6404228716742838872, guid: 133dc072c6ca43643ac1e082d478e889,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b4c2efe918cef140ba593bfef196fa7, type: 3}
+    - target: {fileID: 6404228716742838872, guid: 133dc072c6ca43643ac1e082d478e889,
+        type: 3}
       propertyPath: _piecesSprites.Array.data[0]
       value: 
       objectReference: {fileID: -7512434501291994743, guid: 778bd43e8a6312d41a829c3574c9b000,
@@ -822,6 +832,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8620364240966184992}
     m_Modifications:
+    - target: {fileID: 6404228716742838872, guid: 1952951493ce20947ae51307789d3c5b,
+        type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cfe17648b243e94cb08ea23534308d6, type: 3}
     - target: {fileID: 6404228716742838872, guid: 1952951493ce20947ae51307789d3c5b,
         type: 3}
       propertyPath: _piecesSprites.Array.data[0]
@@ -1225,6 +1240,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6404228716742838872, guid: 769b104624646b24a930e61c5de83ad7,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 768d01ced1a6bdc45a0eea10932868e5, type: 3}
+    - target: {fileID: 6404228716742838872, guid: 769b104624646b24a930e61c5de83ad7,
+        type: 3}
       propertyPath: _piecesSprites.Array.data[0]
       value: 
       objectReference: {fileID: -7512434501291994743, guid: e06461ef2018cc84ebe1941efecfd94e,
@@ -1328,6 +1348,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8620364240966184992}
     m_Modifications:
+    - target: {fileID: 3430369237742271465, guid: dcafbc59f9e1a084c8b43dea90e81820,
+        type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eda8cf90787afb74390581042db939bb, type: 3}
     - target: {fileID: 3430369237742271465, guid: dcafbc59f9e1a084c8b43dea90e81820,
         type: 3}
       propertyPath: _piecesSprites.Array.data[0]

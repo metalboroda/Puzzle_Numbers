@@ -1,8 +1,10 @@
-﻿using DG.Tweening;
+﻿using __Game.Resources.Scripts.EventBus;
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static __Game.Resources.Scripts.EventBus.EventStructs;
 using Random = UnityEngine.Random;
 
 namespace Assets.__Game.Resources.Scripts._GameStuff
@@ -23,6 +25,12 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     [Header("Tutorial")]
     [SerializeField] private bool _tutorial = false;
     [SerializeField] private GameObject _finger;
+    [Header("VFX")]
+    [SerializeField] private ParticleSystem _completeParticles;
+    [Header("SFX")]
+    [SerializeField] private AudioSource _particlesAudio;
+    [Space]
+    [SerializeField] private AudioClip _puzzleClip;
 
     public bool Completed { get; private set; } = false;
 
@@ -138,15 +146,22 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
 
       Completed = true;
 
+      _completeParticles.Play();
+      _particlesAudio.Play();
+
+      EventBus<VariantAudioClickedEvent>.Raise(new VariantAudioClickedEvent { AudioClip = _puzzleClip });
+
       StartCoroutine(DoOnPuzzleCompleted());
     }
 
     private IEnumerator DoOnPuzzleCompleted()
     {
-      yield return new WaitForSeconds(0.5f);
+      yield return new WaitForSeconds(_puzzleClip.length);
 
       if (_puzzlesContainer.SinglePuzzleToComplete == false)
         gameObject.SetActive(false);
+
+      Destroy(_completeParticles.gameObject);
 
       PuzzleCompleted?.Invoke();
     }

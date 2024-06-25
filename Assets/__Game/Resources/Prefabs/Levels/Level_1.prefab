@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 7942468345822059732, guid: a454cc821da5e1b419971d0230763865,
         type: 3}
       propertyPath: _maxTime
-      value: 60
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 8690456869660680946, guid: a454cc821da5e1b419971d0230763865,
         type: 3}

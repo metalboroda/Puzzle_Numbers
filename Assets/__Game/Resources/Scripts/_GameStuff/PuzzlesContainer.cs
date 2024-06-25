@@ -1,7 +1,9 @@
+using __Game.Resources.Scripts.EventBus;
 using Assets.__Game.Resources.Scripts.Game.States;
 using Assets.__Game.Scripts.Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
+using static __Game.Resources.Scripts.EventBus.EventStructs;
 
 namespace Assets.__Game.Resources.Scripts._GameStuff
 {
@@ -29,7 +31,13 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
       for (int i = 0; i < _buttons.Length; i++)
       {
         int index = i;
-        _buttons[index].onClick.AddListener(() => ActivatePuzzle(index));
+
+        _buttons[index].onClick.AddListener(() =>
+        {
+          EventBus<UiButtonEvent>.Raise(new UiButtonEvent());
+
+          ActivatePuzzle(index);
+        });
       }
     }
 

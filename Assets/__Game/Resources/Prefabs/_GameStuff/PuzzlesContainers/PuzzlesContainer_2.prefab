@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4184713525447666227, guid: 6ba29f9c91cbb5844ad58195923922f3,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 04d3ebc6f3c41e649beb6851ba4c51b6, type: 3}
+    - target: {fileID: 4184713525447666227, guid: 6ba29f9c91cbb5844ad58195923922f3,
+        type: 3}
       propertyPath: _piecesSprites.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -48,6 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184713526022167021, guid: 6ba29f9c91cbb5844ad58195923922f3,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cfe17648b243e94cb08ea23534308d6, type: 3}
+    - target: {fileID: 4184713526022167021, guid: 6ba29f9c91cbb5844ad58195923922f3,
+        type: 3}
       propertyPath: _piecesSprites.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -75,6 +85,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6515653079975349017, guid: ac80aac7c5de8024f888aa0a4a899563,
         type: 3}
+    - target: {fileID: 4184713526035804547, guid: 6ba29f9c91cbb5844ad58195923922f3,
+        type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 768d01ced1a6bdc45a0eea10932868e5, type: 3}
     - target: {fileID: 4184713526035804547, guid: 6ba29f9c91cbb5844ad58195923922f3,
         type: 3}
       propertyPath: _piecesSprites.Array.size
@@ -116,6 +131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184713526201246847, guid: 6ba29f9c91cbb5844ad58195923922f3,
         type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b4c2efe918cef140ba593bfef196fa7, type: 3}
+    - target: {fileID: 4184713526201246847, guid: 6ba29f9c91cbb5844ad58195923922f3,
+        type: 3}
       propertyPath: _piecesSprites.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -148,6 +168,11 @@ PrefabInstance:
       propertyPath: m_Padding.m_Left
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5577827386022943305, guid: 6ba29f9c91cbb5844ad58195923922f3,
+        type: 3}
+      propertyPath: _puzzleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eda8cf90787afb74390581042db939bb, type: 3}
     - target: {fileID: 5577827386022943305, guid: 6ba29f9c91cbb5844ad58195923922f3,
         type: 3}
       propertyPath: _piecesSprites.Array.size
