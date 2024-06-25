@@ -168,7 +168,7 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
         _finger.SetActive(true);
         _finger.transform.position = currentPiece.TutorialPoint.position;
 
-        _finger.transform.DOMove(_piecesTriggers[_currentTutorialIndex].transform.position, 1.5f)
+        _finger.transform.DOMove(_piecesTriggers[_currentTutorialIndex].transform.position, 1.25f)
             .SetLoops(-1, LoopType.Restart);
 
         while (_piecesTriggers[_currentTutorialIndex].IsOccupied == false)
