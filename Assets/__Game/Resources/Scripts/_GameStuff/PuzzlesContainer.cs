@@ -45,6 +45,8 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     {
       foreach (var puzzle in _puzzles)
         puzzle.gameObject.SetActive(false);
+
+      EventBus<VariantsAssignedEvent>.Raise(new VariantsAssignedEvent());
     }
 
     private void ActivatePuzzle(int index)
