@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -77,7 +76,7 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
 
       _isDragging = false;
 
-      transform.DOMove(_scatteredPosition, 0.2f);
+      //transform.DOMove(_scatteredPosition, 0.2f);
       _spriteRenderer.sortingOrder = 1;
     }
 

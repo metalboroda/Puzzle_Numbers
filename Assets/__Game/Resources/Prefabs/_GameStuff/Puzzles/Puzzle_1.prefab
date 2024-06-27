@@ -464,7 +464,8 @@ MonoBehaviour:
   - {fileID: 3114454545023626359}
   - {fileID: 8111860305988762297}
   offsetMargin: 1
-  minDistanceBetweenPieces: 2
+  minDistanceBetweenPieces: 2.75
+  maxScatterDistance: 4
   _tutorial: 0
   _finger: {fileID: 4251133920785469020}
   _completeParticles: {fileID: 4652938149959254085}

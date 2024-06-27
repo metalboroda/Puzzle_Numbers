@@ -20,8 +20,8 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     [Space]
     [SerializeField] private PieceTrigger[] _piecesTriggers;
     [Header("Settings")]
-    [SerializeField] private float offsetMargin = 1f;
-    [SerializeField] private float minDistanceBetweenPieces = 1f;
+    [SerializeField] private float _offsetMargin = 1f;
+    [SerializeField] private float _minDistanceBetweenPieces = 2.75f;
     [Header("Tutorial")]
     [SerializeField] private bool _tutorial = false;
     [SerializeField] private GameObject _finger;
@@ -105,10 +105,10 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
       float spriteWidth = renderer.bounds.size.x;
       float spriteHeight = renderer.bounds.size.y;
 
-      float minX = minBounds.x + spriteWidth / 2 + offsetMargin;
-      float maxX = screenBounds.x - spriteWidth / 2 - offsetMargin;
-      float minY = minBounds.y + spriteHeight / 2 + offsetMargin;
-      float maxY = screenBounds.y - spriteHeight / 2 - offsetMargin;
+      float minX = minBounds.x + spriteWidth / 2 + _offsetMargin;
+      float maxX = screenBounds.x - spriteWidth / 2 - _offsetMargin;
+      float minY = minBounds.y + spriteHeight / 2 + _offsetMargin;
+      float maxY = screenBounds.y - spriteHeight / 2 - _offsetMargin;
 
       Vector3 randomPosition;
 
@@ -127,7 +127,7 @@ namespace Assets.__Game.Resources.Scripts._GameStuff
     private bool IsPositionValid(Vector3 position)
     {
       foreach (var placedPosition in _placedPositions)
-        if (Vector3.Distance(position, placedPosition) < minDistanceBetweenPieces) return false;
+        if (Vector3.Distance(position, placedPosition) < _minDistanceBetweenPieces) return false;
 
       return true;
     }
